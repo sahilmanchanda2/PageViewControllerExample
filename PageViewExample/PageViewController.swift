@@ -31,6 +31,7 @@ class PageViewController: UIPageViewController {
         self.delegate = self
         self.dataSource = self
         setViewControllers([list[0]], direction: .forward, animated: true, completion: nil)
+        self.updateCurrentPageLabel(index: 0)
     }
     func movePage(index: Int){
         let currentIndex = self.viewControllers![0] as! Page
